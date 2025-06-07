@@ -104,6 +104,9 @@ function App() {
         <button onClick={clear}>Clear</button>
         <button onClick={save} style={{ marginLeft: 10 }}>Save</button>
       </div>
+      <footer style={{ marginTop: 40, textAlign: 'center', color: '#888', fontSize: '0.95rem' }}>
+        &copy; {new Date().getFullYear()} Lameck-dev
+      </footer>
     </div>
   );
 }
