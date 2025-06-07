@@ -1,5 +1,7 @@
 import { useState, useRef } from 'react';
 import SignatureCanvas from 'react-signature-canvas';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import './App.css';
 
 function App() {
@@ -63,6 +65,8 @@ function App() {
 
   return (
     <div className="App">
+      <Analytics />
+      <SpeedInsights />
       <h1>Signature Generator</h1>
       <div style={{ marginBottom: 10 }}>
         <label htmlFor="penWidth">Pen Width: </label>
