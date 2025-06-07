@@ -86,8 +86,19 @@ function App() {
         penColor="black"
         minWidth={penWidth}
         maxWidth={penWidth}
-        canvasProps={{ width: 700, height: 200, className: 'sigCanvas' }}
-        backgroundColor="#fff" // White background for the drawing pad
+        canvasProps={{
+          width: window.innerWidth < 800 ? window.innerWidth * 0.95 : 700,
+          height: window.innerWidth < 500 ? 120 : window.innerWidth < 800 ? 160 : 200,
+          className: 'sigCanvas',
+          style: {
+            touchAction: 'none',
+            width: '100%',
+            maxWidth: '700px',
+            height: window.innerWidth < 500 ? '120px' : window.innerWidth < 800 ? '160px' : '200px',
+            display: 'block',
+          }
+        }}
+        backgroundColor="#fff"
       />
       <div style={{ marginTop: 10 }}>
         <button onClick={clear}>Clear</button>
